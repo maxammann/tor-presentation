@@ -13,7 +13,7 @@ let deck = new Reveal({
   history: true,
   center: false,
   math: {
-    mathjax: '/mathjax.js',
+    mathjax: './mathjax.js',
     config: 'TeX-AMS_HTML-full',
     // pass other options into `MathJax.Hub.Config()`
     TeX: { Macros: { RR: "{\\bf R}" } }
