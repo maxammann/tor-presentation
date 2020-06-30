@@ -2,20 +2,29 @@ var path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: "./src/index.js",
+  entry: {
+    index: ['react-hot-loader/patch', './src/index.js'],
+    reveal: ['./src/reveal-init.js']
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    filename: "[name].js",
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
     watchContentBase: true,
-    http2: true
+    http2: false,
+    hot: false
   },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
