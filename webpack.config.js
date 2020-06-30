@@ -4,18 +4,18 @@ module.exports = {
   mode: "production",
   entry: {
     index: ['react-hot-loader/patch', './src/index.js'],
-    reveal: ['./src/reveal-init.js']
+    reveal: ['./src/reveal-init.js'],
+    mathjax: ['mathjax/es5/tex-svg-full']
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
-  stats: 'none',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+    compress: false,
     port: 9000,
-    watchContentBase: true,
+    watchContentBase: false,
     http2: false,
     hot: false
   },

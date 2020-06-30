@@ -1,0 +1,13 @@
+
+@import url(assets/ComputerModern/Serif/cmun-serif.css);
+
+.reveal {
+    font-family: "CMU Serif", serif !important;
+    font-size: 30px !important;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: "CMU Sans Serif", sans-serif !important;
+}
+
+

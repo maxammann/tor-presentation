@@ -4,6 +4,7 @@ import SectionIntro from './slides/SectionIntro'
 import SectionOperating from './slides/SectionOperating'
 import SectionHiddenServices from './slides/SectionHiddenServices'
 import SectionHowTo from './slides/SectionHowTo'
+import SectionReferences from './slides/SectionReferences'
 
 const RevealContainer = () => (
   <div class="reveal">
@@ -12,6 +13,7 @@ const RevealContainer = () => (
       <SectionHowTo />
       <SectionOperating />
       <SectionHiddenServices />
+      <SectionReferences />
     </div>
   </div>
 )

@@ -1,15 +1,11 @@
 import * as React from 'react'
 
-const Section = (props) => {
+const MarkdownSection = (props) => {
   return (
-    <div class="slides">
-      <section data-markdown={''} data-separator="---">
-        <script type="text/template">
-          {props.children}
-        </script>
-      </section>
-    </div>
+    <section>
+      {props.children}
+    </section>
   )
 }
 
-export default Section
+export default MarkdownSection

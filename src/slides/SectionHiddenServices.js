@@ -1,13 +1,13 @@
 import * as React from 'react'
-import Section from '../components/Section'
+import MarkdownSection from '../components/MarkdownSection'
 import TorLogo from '../assets/Tor-logo-2011-flat.svg'
 
 const SectionHiddenServices = () => (
   // language=md
-  <Section>{`
+  <MarkdownSection>{`
   ### Hands-on: Hidden Services
   Overview of private Tor Network
-  `}</Section>
+  `}</MarkdownSection>
 )
 
 export default SectionHiddenServices
