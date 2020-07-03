@@ -10,6 +10,12 @@ import DA from '../assets/da.drawio.svg'
 import Consensus from '../assets/consensus.drawio.svg'
 import Bridge from '../assets/bridge.drawio.svg'
 import Section from '../components/Section'
+import HS1 from '../assets/hidden-service1.drawio.svg'
+import HS2 from '../assets/hidden-service2.drawio.svg'
+import HS3 from '../assets/hidden-service3.drawio.svg'
+import HS4 from '../assets/hidden-service4.drawio.svg'
+import HS5 from '../assets/hidden-service5.drawio.svg'
+import Petnames from '../assets/petnames.drawio.svg'
 
 const SectionHowTo = () => (
   <>
@@ -23,27 +29,17 @@ const SectionHowTo = () => (
         <img className="fragment" src={Detail4} height={600} />
       </div>
     </Section>
-    {/*language=md*/}
-    <MarkdownSection>
-      {`
-  ![](${Detail4}) <!-- .element height="350px" -->
-  * The **Guard Node** does not know where you want to go, but knows your ISP IP
-  * The **Relay Node** does not know where you come from and where you want to go
-  * The **Exit Node** does now know where you come from, but knows which IP you want to reach
-  `}
-    </MarkdownSection>
-    {/*language=md*/}
     <Section>
       <h3>Properties of Anonymization</h3>
       <div className="r-stack">
-        <div className="fragment fade-out">
+        <div className="fragment fade-out" data-fragment-index="0">
           <blockquote>
             Tor does not replace transport encryption which is provided by HTTPS
           </blockquote>
         </div>
-        <div className="fragment current-visible">
+        <div className="fragment current-visible" data-fragment-index="0">
           <blockquote>
-            Circuits <bold>always</bold> consist of three nodes
+            Circuits <b>always</b> consist of three nodes
           </blockquote>
           <p>
             If the Guard and Exit node are compromised, using for example 1500 nodes in a circuit would not help
@@ -63,10 +59,17 @@ const SectionHowTo = () => (
             Clients rotate their Guard Nodes only every few months. This is called Guard Pinning.
           </blockquote>
           <p>
-            Suppose there are N nodes and the attacker Bob controls C nodes and being profiled once is as bad as being profiled all the time.
+            Suppose there are N nodes and the attacker Bob controls C nodes and being profiled once is as bad as being
+            profiled all the time.
           </p>
           <p>
-            If you choose a Guard Node and Exit Node at random for each circuit Bob can deanomize {"\\(F=(\\frac{C}{N})^2\\)"} of all circuits. Let k be the number of circuits built by Alice. Then the probability that Bob would see Alice at least once is {"\\(1-(1-F)^k\\)"}. With large k the probability approximates 1.
+            If you choose a Guard Node and Exit Node at random for each circuit Bob can
+            deanomize {'\\(F=(\\frac{C}{N})^2\\)'} of all circuits. Let {'\\(k\\)'} be the number of circuits built by Alice. Then
+            the probability that Bob would see Alice at least once is {'\\(1-(1-F)^k\\)'}. With large {'\\(k\\)'} the probability
+            approximates 1.
+          </p>
+          <p>
+            If Alice pins the Guard node then {'\\(k=1\\)'}. This means she has a overall lower change of being profiled at least once.
           </p>
           <aside className="notes">
             This is not perfect: A major Firewall or ISP could make non-controlled Guards unavailable.
@@ -74,12 +77,13 @@ const SectionHowTo = () => (
         </div>
         <div className="fragment current-visible">
           <blockquote>
-           The identical node, node from a similar network or node from the same family is not choosen twice for the same path.
+            The identical node, node from a similar network or node from the same family is not choosen twice for the
+            same path.
           </blockquote>
           <p>
             If a node is reused, then the network is technically reduced to a 2-hop circuit
           </p>
-          <img src={Reuse}/>
+          <img src={Reuse} />
         </div>
       </div>
     </Section>
@@ -90,7 +94,7 @@ const SectionHowTo = () => (
   
   ![](${DA}) <!-- .element height="400px" -->
   
-  * There are currently 10 hardcoded DAs in Tor   <!-- .element class="fragment" -->
+  * There are currently 10 hardcoded DAs in Tor
   * DAs are operated by various organisations which builds trust  <!-- .element class="fragment" -->
       
   Note: Source Code linked in References    
@@ -109,14 +113,7 @@ const SectionHowTo = () => (
   
    [2020-06-30-20-00-00-consensus](https://collector.torproject.org/recent/relay-descriptors/consensuses/2020-06-30-20-00-00-consensus)
    
-   \`\`\`plain
-   r Unnamed AAQvHRmOlCimgA8lCcEkqNtsitM 6kNTt9iqQf3ggUm0yT+exX3BaPc 2020-06-30 06:16:59 13.64.95.164 443 0
-   s Fast Running Valid
-   v Tor 0.4.3.5
-   pr Cons=1-2 Desc=1-2 DirCache=1-2 HSDir=1-2 HSIntro=3-4 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Relay=1-2
-   w Bandwidth=693
-   p reject 1-65535
-   r flageolet AAbeLnfjw+xeGCWwduUlf9IA7Qo rCoA4CvcGdIOjY5VzZXxR/wveUg 2020-06-30 19:18:19 80.195.122.166 9090 9091
+   <pre><code data-line-numbers="1|2|5|6">r flageolet AAbeLnfjw+xeGCWwduUlf9IA7Qo rCoA4CvcGdIOjY5VzZXxR/wveUg 2020-06-30 19:18:19 80.195.122.166 9090 9091
    s Fast Guard HSDir Running Stable V2Dir Valid
    v Tor 0.4.2.7
    pr Cons=1-2 Desc=1-2 DirCache=1-2 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Relay=1-2 Padding=2 FlowCtrl=1
@@ -127,8 +124,7 @@ const SectionHowTo = () => (
    v Tor 0.4.3.5
    pr Cons=1-2 Desc=1-2 DirCache=1-2 HSDir=1-2 HSIntro=3-5 HSRend=1-2 Link=1-5 LinkAuth=1,3 Microdesc=1-2 Relay=1-2 Padding=2 FlowCtrl=1
    w Bandwidth=9
-   ...
-   \`\`\`
+   </code></pre>
   
   ---
   ### Bridge Nodes
@@ -137,15 +133,48 @@ const SectionHowTo = () => (
 
   * Bridge Nodes offer a way to get a consensus even in DAs are IP-blocked
   * The full list of Bridge Nodes is never published. There are various distribution methods in in place (email, social networks etc.)
-
+ 
   ---
+  ### Hidden Service
 
-  ### Hidden Services
-  // TODO
-  `}
+  * TCP services within the Tor network
+  * The identity of the Hidden Service is obfuscated <!-- .element class="fragment" -->
+`}
     </MarkdownSection>
+    <Section>
+      <div className="r-stack">
+        <div className="fragment fade-out" data-fragment-index="0">
+          <h4>Service Registration</h4>
+          <img src={HS1} height={600} />
+        </div>
+        <div className="fragment fade-out current-visible" data-fragment-index="0">
+          <h4>Lookup the DHT</h4>
+          <img src={HS2} height={600} />
+        </div>
+        <div className="fragment fade-out current-visible">
+          <h4>Knocking at the door</h4>
+          <img src={HS3} height={600} />
+        </div>
+        <div className="fragment fade-out current-visible">
+          <h4>Offer a Rendevouz Point</h4>
+          <img src={HS4} height={600} />
+        </div>
+        <div className="fragment fade-out current-visible">
+          <h4>Meeting at the Rendevouz Point</h4>
+          <img src={HS5} height={600} />
+        </div>
+      </div>
+    </Section>
+    {/*language=md*/}
+    <MarkdownSection>{`
+  ### Onion Addresses
+  
+  * Addresses are not guessable, but also not memoriable
+  * Onion addresses are hight-entropy to Zooko's triangle: 
+     ![](${Petnames}) 
+      `}</MarkdownSection>
   </>
-)
 
+)
 
 export default SectionHowTo

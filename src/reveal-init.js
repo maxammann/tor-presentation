@@ -12,9 +12,10 @@ let deck = new Reveal({
   progress: true,
   history: true,
   center: false,
+  backgroundTransition: 'none',
   math: {
     mathjax: './mathjax.js',
-    config: 'TeX-AMS_HTML-full',
+    config: '',
     // pass other options into `MathJax.Hub.Config()`
     TeX: { Macros: { RR: "{\\bf R}" } }
   },

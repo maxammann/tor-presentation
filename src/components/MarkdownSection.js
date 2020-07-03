@@ -2,7 +2,7 @@ import * as React from 'react'
 
 const MarkdownSection = (props) => {
   return (
-    <section data-markdown={''} data-separator="---" data-separator-vertical="----">
+    <section data-transition={props.transition ? props.transition : 'none'} data-markdown={''} data-separator="---" data-separator-vertical="----">
       <script type="text/template">
         {props.children}
       </script>

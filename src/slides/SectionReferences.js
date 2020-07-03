@@ -13,6 +13,8 @@ const SectionReferences = () => (
   * https://github.com/torproject/torspec/blob/master/proposals/271-another-guard-selection.txt (Guard Formulas)
   * https://gitweb.torproject.org/tor.git/tree/src/app/config/auth_dirs.inc (Hardcoded DAs)
   * https://gitweb.torproject.org/torspec.git/tree/dir-spec.txt
+  * https://jordan-wright.com/blog/2015/05/14/how-tor-works-part-three-the-consensus/
+  * http://www.skyhunter.com/marcs/petnames/IntroPetNames.html
 )
   `}</MarkdownSection>
 )

@@ -8,6 +8,7 @@
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
     font-family: "CMU Sans Serif", sans-serif !important;
+    text-transform: none !important;
 }
 
 
