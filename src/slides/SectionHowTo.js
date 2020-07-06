@@ -109,9 +109,8 @@ const SectionHowTo = () => (
    
    ---
    
+   ${""/*
    #### Example of a Consensus
-  
-   [2020-06-30-20-00-00-consensus](https://collector.torproject.org/recent/relay-descriptors/consensuses/2020-06-30-20-00-00-consensus)
    
    <pre><code data-line-numbers="1|2|5|6">r flageolet AAbeLnfjw+xeGCWwduUlf9IA7Qo rCoA4CvcGdIOjY5VzZXxR/wveUg 2020-06-30 19:18:19 80.195.122.166 9090 9091
    s Fast Guard HSDir Running Stable V2Dir Valid
@@ -126,13 +125,15 @@ const SectionHowTo = () => (
    w Bandwidth=9
    </code></pre>
   
-  ---
+  [2020-06-30-20-00-00-consensus](https://collector.torproject.org/recent/relay-descriptors/consensuses/2020-06-30-20-00-00-consensus)
+  
+  ---*/}
   ### Bridge Nodes
 
   ![](${Bridge}) <!-- .element height="350px" -->
 
   * Bridge Nodes offer a way to get a consensus even in DAs are IP-blocked
-  * The full list of Bridge Nodes is never published. There are various distribution methods in in place (email, social networks etc.)
+  * The full list of Bridge Nodes is never published. There are various distribution methods (email, social networks etc.)
  
   ---
   ### Hidden Service
@@ -166,13 +167,13 @@ const SectionHowTo = () => (
       </div>
     </Section>
     {/*language=md*/}
-    <MarkdownSection>{`
-  ### Onion Addresses
-  
-  * Addresses are not guessable, but also not memoriable
-  * Onion addresses are hight-entropy to Zooko's triangle: 
-     ![](${Petnames}) 
-      `}</MarkdownSection>
+  {/*  <MarkdownSection>{`*/}
+  {/*### Onion Addresses*/}
+
+  {/** Addresses are not guessable, but also not memoriable*/}
+  {/** Onion addresses are hight-entropy to Zooko's triangle:  <!-- .element class="fragment" -->*/}
+  {/*![](${Petnames})   <!-- .element class="fragment" -->*/}
+  {/*    `}</MarkdownSection>*/}
   </>
 
 )

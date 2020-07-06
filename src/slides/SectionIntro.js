@@ -22,8 +22,7 @@ const SectionIntro = () => (
   
   * Open network of distributed systems 
   * Mitigates against tracking, surveillance and censorship by anonymizing users
-  * Run by a US non-profit and volunteers from all over the world
-  * It's Tor, not TOR
+  * Run by volunteers from all over the world
   `}</MarkdownSection>
     <Section>
       <h3>What Tor is not</h3>
