@@ -83,14 +83,14 @@ root@tor-private:~$ docker ps
   * Inspect configuration:
   
 \`\`\`console
-root@tor-private:~$ docker exec -ti private-tor-network_hs_1_1 cat /etc/tor/torrc /tor/HSzeiyoociec/hs/hostname
+root@tor-private:~$ docker exec -ti private-tor-network_hs_1_1 cat /etc/tor/torrc /tor/HSfochaikaes/hs/hostname
 \`\`\`
 
-  * Test the [hidden service](http://2pjebgj4mzsbnzxqzlfdblbgsda4fsvwz77t6y5dztob2zc3c6hcjgqd.onion/wiki/Wikipedia:Hauptseite)
+  * Test the [hidden service](http://3z4tooerzlcfox7eif6dw6wnajovahdmoyp4tdflrio5g2lo7ibq6rid.onion/wiki/Wikipedia:Hauptseite)
   
 \`\`\`console
 max@home:~$ ssh -L 9050:localhost:9050 root@159.69.44.82
-root@tor-private:~$ curl -s -L --socks5-hostname 127.0.0.1:9050 2pjebgj4mzsbnzxqzlfdblbgsda4fsvwz77t6y5dztob2zc3c6hcjgqd.onion > /dev/null && echo "OK"
+root@tor-private:~$ curl -s -L --socks5-hostname 127.0.0.1:9050 3z4tooerzlcfox7eif6dw6wnajovahdmoyp4tdflrio5g2lo7ibq6rid.onion > /dev/null && echo "OK"
 \`\`\`
   
   `}</MarkdownSection>
