@@ -12,7 +12,7 @@ const SectionIntro = () => (
     <MarkdownSection>{`
   ![Konzepte Verteilter Systeme Slide 18](${TorLogo})
   # The Tor Project
-  ## Introduction and Hands-on
+  ## Overview and Hands-on
   ---
   ![](${Reasons})
   
@@ -23,6 +23,7 @@ const SectionIntro = () => (
   * Open network of distributed systems 
   * Mitigates against tracking, surveillance and censorship by anonymizing users
   * Run by volunteers from all over the world
+  * Over 460 relevant publications which include architecture proposals, defenses and attacks since the 70s
   `}</MarkdownSection>
     <Section>
       <h3>What Tor is not</h3>

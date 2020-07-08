@@ -9,7 +9,7 @@ const SectionIntro = () => (
   <MarkdownSection>{`
   ### Tor as a User
   * Censored user, human rights defender, activist persona
-     * Tunnel traffic through the network
+     * Tunnel traffic through the network (using Tor Browser)
      * Hosting a Hidden Service
      
   ![](${Socks})

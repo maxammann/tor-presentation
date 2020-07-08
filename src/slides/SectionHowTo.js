@@ -36,6 +36,7 @@ const SectionHowTo = () => (
           <blockquote>
             Tor does not replace transport encryption which is provided by HTTPS
           </blockquote>
+          <img src={Detail4} height={350} />
         </div>
         <div className="fragment current-visible" data-fragment-index="0">
           <blockquote>
@@ -63,14 +64,20 @@ const SectionHowTo = () => (
             profiled all the time.
           </p>
           <p>
-            If you choose a Guard Node and Exit Node at random for each circuit Bob can
-            deanomize {'\\(F=(\\frac{C}{N})^2\\)'} of all circuits. Let {'\\(k\\)'} be the number of circuits built by Alice. Then
-            the probability that Bob would see Alice at least once is {'\\(1-(1-F)^k\\)'}. With large {'\\(k\\)'} the probability
-            approximates 1.
+            The probability of visiting a compromised node is {'\\(P=\\frac{C}{N}\\)'}. If a new Guard Node is choosen every time a new circuit is build then it is guaranteed that you visit the compromised node at least once.
           </p>
           <p>
-            If Alice pins the Guard node then {'\\(k=1\\)'}. This means she has a overall lower change of being profiled at least once.
+            If you roll the dice only once, then the overall probability is lower.
           </p>
+          {/*<p>*/}
+          {/*  If you choose a Guard Node and Exit Node at random for each circuit Bob can*/}
+          {/*  deanomize {'\\(F=(\\frac{C}{N})^2\\)'} of all circuits. Let {'\\(k\\)'} be the number of circuits built by Alice. Then*/}
+          {/*  the probability that Bob would see Alice at least once is {'\\(1-(1-F)^k\\)'}. With large {'\\(k\\)'} the probability*/}
+          {/*  approximates 1.*/}
+          {/*</p>*/}
+          {/*<p>*/}
+          {/*  If Alice pins the Guard node then {'\\(k=1\\)'}. This means she has a overall lower change of being profiled at least once.*/}
+          {/*</p>*/}
           <aside className="notes">
             This is not perfect: A major Firewall or ISP could make non-controlled Guards unavailable.
           </aside>
