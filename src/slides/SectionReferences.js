@@ -1,13 +1,25 @@
 import * as React from 'react'
 import MarkdownSection from '../components/MarkdownSection'
-import Probabilities from '../assets/probabilities.svg'
+import GithubIcon from '../assets/icons/github.svg'
 
 const SectionReferences = () => (
-  // language=md
-  <MarkdownSection>{`
+  <>
+    <MarkdownSection>{`
+  ### See you after the break with:
+   
+  ##### "Next Level SVGs - How to enable great SVG usage without much work from designers or devs" by Christian Reichart
+  
+  
+  Thanks to Digitalfabrik gGmbH for the sponsoring the Zoom session!
+  
+  
+  * [github.com/maxammann](https://github.com/maxammann)
+  * [maxammann.org](https://maxammann.org)
+  
+  `}</MarkdownSection>
+    <MarkdownSection>{`
   ### References
   <!-- .slide: style="font-size: 20px;"-->
-  * Bauer B., Konzepte Verteilter Systeme, Slide 18
   * Tor Project, Tor directory protocol, version 3, URL: \`https://gitweb.torproject.org/torspec.git/tree/dir-spec.txt\`
   * Tor Project, The lifecycle of a new relay, URL: \`https://blog.torproject.org/lifecycle-new-relay\`
   * Tor Project, What are Entry Guards?, URL: \`https://2019.www.torproject.org/docs/faq#EntryGuards\`
@@ -19,6 +31,7 @@ const SectionReferences = () => (
   * Stiegler M, An Introduction to Petname Systems, URL: \`http://www.skyhunter.com/marcs/petnames/IntroPetNames.html\`
 )
   `}</MarkdownSection>
+  </>
 )
 
 export default SectionReferences

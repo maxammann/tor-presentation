@@ -1,6 +1,7 @@
 import * as React from 'react'
 import MarkdownSection from '../components/MarkdownSection'
 import Probabilities from '../assets/probabilities.svg'
+import Probabilities2 from '../assets/probabilities2.svg'
 import Socks from '../assets/socks.drawio.svg'
 import PrivateTor from '../assets/private-tor-network.drawio.svg'
 
@@ -19,7 +20,10 @@ const SectionIntro = () => (
    * Guard or Relay node
    * Exit node
    
-  ![](${Probabilities}) <!-- .element height="400px" -->
+  <p float="left">
+    <img src="${Probabilities}" width="400" />
+    <img src="${Probabilities2}" width="400" /> 
+  </p>
 
   <aside class="notes">
     <li>consensus weight fraction = 1/consensus weight</li>

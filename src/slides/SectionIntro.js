@@ -3,27 +3,24 @@ import MarkdownSection from '../components/MarkdownSection'
 import TorLogo from '../assets/Tor-logo-2011-flat.svg'
 import Proxy from '../assets/proxy.drawio.svg'
 import Simple from '../assets/simple.drawio.svg'
-import Reasons from '../assets/reasons.drawio.svg'
+import Users from '../assets/users.png'
 import Section from '../components/Section'
 
 const SectionIntro = () => (
   <>
     {/*language=md*/}
     <MarkdownSection>{`
-  ![Konzepte Verteilter Systeme Slide 18](${TorLogo})
+  ![](${TorLogo})
   # The Tor Project
-  ## Overview and Hands-on
-  ---
-  ![](${Reasons})
-  
-  🡆 Proposal: Anonymisation is a further reason for distributed systems
   ---
   ### What is Tor?
   
-  * Open network of distributed systems 
   * Mitigates against tracking, surveillance and censorship by anonymizing users
   * Run by volunteers from all over the world
-  * Over 460 relevant publications which include architecture proposals, defenses and attacks since the 70s
+  * Over 2 million users currently
+  
+   ![](${Users}) <!-- .element height="400px" -->
+  
   `}</MarkdownSection>
     <Section>
       <h3>What Tor is not</h3>

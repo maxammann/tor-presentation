@@ -15,7 +15,6 @@ import HS2 from '../assets/hidden-service2.drawio.svg'
 import HS3 from '../assets/hidden-service3.drawio.svg'
 import HS4 from '../assets/hidden-service4.drawio.svg'
 import HS5 from '../assets/hidden-service5.drawio.svg'
-import Petnames from '../assets/petnames.drawio.svg'
 
 const SectionHowTo = () => (
   <>
@@ -40,47 +39,11 @@ const SectionHowTo = () => (
         </div>
         <div className="fragment current-visible" data-fragment-index="0">
           <blockquote>
-            Circuits <b>always</b> consist of three nodes
-          </blockquote>
-          <p>
-            If the Guard and Exit node are compromised, using for example 1500 nodes in a circuit would not help
-          </p>
-        </div>
-        <div className="fragment current-visible">
-          <blockquote>
             Anonymization fails if the adversary controls a Guard and Exit node of a given circuit
           </blockquote>
           <p>
             True for all current practical low-latency anonymity designs
           </p>
-        </div>
-
-        <div className="fragment current-visible">
-          <blockquote>
-            Clients rotate their Guard Nodes only every few months. This is called Guard Pinning.
-          </blockquote>
-          <p>
-            Suppose there are N nodes and the attacker Bob controls C nodes and being profiled once is as bad as being
-            profiled all the time.
-          </p>
-          <p>
-            The probability of visiting a compromised node is {'\\(P=\\frac{C}{N}\\)'}. If a new Guard Node is choosen every time a new circuit is build then it is guaranteed that you visit the compromised node at least once.
-          </p>
-          <p>
-            If you roll the dice only once, then the overall probability is lower.
-          </p>
-          {/*<p>*/}
-          {/*  If you choose a Guard Node and Exit Node at random for each circuit Bob can*/}
-          {/*  deanomize {'\\(F=(\\frac{C}{N})^2\\)'} of all circuits. Let {'\\(k\\)'} be the number of circuits built by Alice. Then*/}
-          {/*  the probability that Bob would see Alice at least once is {'\\(1-(1-F)^k\\)'}. With large {'\\(k\\)'} the probability*/}
-          {/*  approximates 1.*/}
-          {/*</p>*/}
-          {/*<p>*/}
-          {/*  If Alice pins the Guard node then {'\\(k=1\\)'}. This means she has a overall lower change of being profiled at least once.*/}
-          {/*</p>*/}
-          <aside className="notes">
-            This is not perfect: A major Firewall or ISP could make non-controlled Guards unavailable.
-          </aside>
         </div>
         <div className="fragment current-visible">
           <blockquote>
@@ -105,6 +68,14 @@ const SectionHowTo = () => (
   * DAs are operated by various organisations which builds trust  <!-- .element class="fragment" -->
       
   Note: Source Code linked in References    
+  ---
+  ### Bridge Nodes
+
+  ![](${Bridge}) <!-- .element height="350px" -->
+
+  * Bridge Nodes offer a way to get a consensus even in DAs are IP-blocked
+  * The full list of Bridge Nodes is never published. There are various distribution methods (email, social networks etc.)
+ 
   ---
    
    ### Voting Process in a Nutshell
@@ -135,14 +106,6 @@ const SectionHowTo = () => (
   [2020-06-30-20-00-00-consensus](https://collector.torproject.org/recent/relay-descriptors/consensuses/2020-06-30-20-00-00-consensus)
   
   ---*/}
-  ### Bridge Nodes
-
-  ![](${Bridge}) <!-- .element height="350px" -->
-
-  * Bridge Nodes offer a way to get a consensus even in DAs are IP-blocked
-  * The full list of Bridge Nodes is never published. There are various distribution methods (email, social networks etc.)
- 
-  ---
   ### Hidden Service
 
   * TCP services within the Tor network
